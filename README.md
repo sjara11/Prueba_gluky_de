@@ -2,6 +2,8 @@
 
 Explicación de la solución para la prueba de Data Engineer Gluky
 
+Archivos Cargados: Script de solución y queries utilizados para la ETL del modelo estrella
+
 Punto 1. Se utilizo la API de twitter para recolectar diariamente (0-100) tweets de un tema aleatorio y se tomaron los autores de estos tweets como los usuarios simulados solicitados por el ejercicio, seguido de esto convierte esta información no estructurada en una tabla que es cargada desde python a un bucket en GCP. Después desde python se hace la creación de la tabla externa conectada a los activos csv del bucket (API GCS) y se crea una vista con los usuarios únicos a partir de la última fecha de actualización para evitar usuarios duplicados (API BigQuery).
 
 Punto 2. Se hace una conexión directa entre BigQuery Data Studio para la construcción de un reporte gerencial que se actualiza automaticamente con los cambios en la fuente, se toma el dataset público de ventas de licor en IOWA. Este reporte permite adaptarse a las necesidades del usuario por medio de filtros y también permite descargar los datos subyacentes en Excel o el reporte en PDF.
