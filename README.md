@@ -8,11 +8,11 @@ Punto 1. Se utilizo la API de twitter para recolectar diariamente (0-100) tweets
 
 Punto 2. Se hace una conexión directa entre BigQuery Data Studio para la construcción de un reporte gerencial que se actualiza automaticamente con los cambios en la fuente, se toma el dataset público de ventas de licor en IOWA. Este reporte permite adaptarse a las necesidades del usuario por medio de filtros y también permite descargar los datos subyacentes en Excel o el reporte en PDF.
 
-LINK: https://datastudio.google.com/s/rSnkQReV8HI
+LINK: https://datastudio.google.com/reporting/eff5eb62-103b-420f-a289-83f6eb0885e5
 
 3. En python para simular el reporsitorio de puntos, se toman los usuarios únicos almacenados en la vista de BQ (API BQ) y se realizar un proceso aleatorio donde se generan 700 transacciones, de asignaciones y redenciones de puntos. Estos son exportados a una tabla en MySQL. Después desde python se extrae la información de los puntos y la información de los usuarios de BQ para hacer la integración de la información y procesamiento para poder ver por usuario/mes los puntos recibidos, puntos redimidos y su respectivo saldo, esta información es cargada a GCS (API GCS) y posteriormente conectada con Data Studio para crear un reporte que permita visualizar la información.
 
-LINK: https://datastudio.google.com/s/mwFs12hkyVI
+LINK: https://datastudio.google.com/reporting/e1781e4a-378c-4844-bb00-58be56cfa162
 
 4. Para este ejercicio se tomaron 10.000 registros de las ventas de licor en IOWA posteriores al 2019 desde la consolo de BQ y se exporta este archivo a python, con este archivo se hace crean 3 funciones: 1. que permite calcular las metas para cada producto vendido con el promedio por mes de cada vendedor, esta permite elegir la variable a tomar entre las existentes en el dataframe que son botellas vendidas, litros vendidos o dolares vendidos. 2 y 3 son dos funciones relacioada que permiten decidir cual es el periodo de tiempo a liquidar y los respectivos puntos a entregar por cumplor la meta mensual de cada producto vendido.
 
